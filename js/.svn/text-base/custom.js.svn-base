@@ -1,0 +1,24 @@
+function readfilename (argument) {
+	var file_count = document.getElementById("file_to_upload");
+	if(file_count.files.length>0){
+
+		for(var i=0;i<=file_count.files.length-1;i++){
+		var name_popup=file_count.files.item(i).name;
+		document.getElementById("file_name").append(name_popup);
+		}
+
+	}
+	else
+	{
+		document.getElementById("sake_the_body").classList.add("shake");
+		document.getElementById("sake_the_body").style.background = 'red';
+		myVar = setInterval("stop_shaking()", 2000);
+		document.getElementById("message_display").innerHTML="Please Select Any File...!!!!";
+	}
+}
+
+function stop_shaking(){
+	document.getElementById("sake_the_body").classList.remove("shake");
+	document.getElementById("sake_the_body").style.background = 'green';
+	document.getElementById("message_display").innerHTML="";
+}
