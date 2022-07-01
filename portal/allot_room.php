@@ -1,7 +1,18 @@
 <?php $title="Allot Room"; include('include/header.php'); include 'include/dbconfig.php'; ?>
-<h2 align="center" class="beautify-border">Room Allotment Panel</h2>
-<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
-<h1 align="center">Allot a Room</h1>
+
+<!-- <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span> -->
+
+
+
+<div id="page-wrapper">
+    <div id="page-inner">
+        <div class="row">
+        <h2 align="center" class="beautify-border">Room Allotment Panel</h2>
+            <div class="col-md-12">
+
+            <h1 align="center">Allot a Room</h1>
+            </div>
+        </div>
 <div class="container">
 <div class="jumbotron">
 <?php
@@ -44,9 +55,10 @@ else
             <th>College Name</th>
             <th>Address</th>
             <th>Mobile</th>
+            <th>Current Year</th>
         </tr>
     </thead>
-    <tbody align="center">
+    <tbody align="justify">
         <?php
         $student_id=$_REQUEST['student_id'];
 $data=mysqli_query($conn,"SELECT * FROM students WHERE request_status='Pending' AND 
@@ -58,12 +70,14 @@ $data=mysqli_query($conn,"SELECT * FROM students WHERE request_status='Pending' 
             $mobile=$row->mobile;
             $id=$row->id;
             $apply_date=$row->apply_date;
+            $current_year=$row->current_year;
         echo '<tr>
             <td>'.$apply_date.'</td>
             <td>'.$name.'</td>
             <td>'.$college_name.'</td>
             <td>'.$address.'</td>
             <td>'.$mobile.'</td>
+            <td>'.$current_year.'</td>
             </tr>';
         }
         ?> 

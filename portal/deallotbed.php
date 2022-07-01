@@ -1,18 +1,17 @@
+
 <?php $title='Deallot Beds'; include('include/header.php'); include 'include/dbconfig.php'; ?>
 
 
-<h2 align="center" class="beautify-border">Hostel Management System</h2>
-<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
 
-
-<h1 align="center">Deallot the Room </h1>
-
-
-
-<div class="container">
-<div class="jumbotron">
-
-
+<div id="page-wrapper">
+    <div id="page-inner">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="page-head-line">Deallot the Room</h1>
+            </div>
+        </div>
+        <div class="container">
+            <div class="jumbotron">
 <?php 
 if(isset($_REQUEST['submit']))
 {
@@ -41,12 +40,6 @@ if(mysqli_query($conn,"UPDATE room_allotment_table SET dealloted_on='$date ' WHE
 }
 
 ?>
-
-
-
-
-
-
 
 <table class="table">
     <thead>
@@ -105,13 +98,12 @@ if(mysqli_query($conn,"UPDATE room_allotment_table SET dealloted_on='$date ' WHE
 </div>
 
 
-
+</div>
 
 
 
 
 </body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/custom.js?v=11"></script>
+<?php include('include/footer.php'); ?>
+
 </html>

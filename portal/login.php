@@ -1,4 +1,4 @@
-<?php session_start(); ?>
+ <?php session_start(); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,14 +14,15 @@
                <h1><b> Login to Portal </b></h1>
             </div>
         </div>
-         <div class="row ">
-               
-                <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1">
+         <div class="row " align="center">
+               <div class="col-md-4">
+               </div>
+                <div class="col-md-4">
                            <?php
 						   
 						   if(isset($_POST['submit']))
 						   {
-							include('include/dbconfig.php');
+                            include('include/dbconfig.php');
 							$username=$_POST['user'];   
 							$password=md5($_POST['password']);
 							$a=mysqli_query($conn,"SELECT username,password FROM portal WHERE username='$username' AND BINARY password='$password'");
@@ -60,10 +61,15 @@
                             </div>
                            
                         </div>
-                
+                               <div class="col-md-4">
+               </div>
                 
         </div>
     </div>
 
 </body>
-</html>
+ </html>
+
+
+
+

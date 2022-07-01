@@ -14,8 +14,9 @@
             </div>
         </div>
          <div class="row " align="center">
-               
-                <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1" align="center">
+               <div class="col-md-4">
+               </div>
+                <div class="col-md-4">
                            <?php
                
                if(isset($_POST['submit']))
@@ -61,7 +62,8 @@
                             </div>
                            
                         </div>
-                
+                <div class="col-md-4">
+                </div>
                 
         </div>
     </div>

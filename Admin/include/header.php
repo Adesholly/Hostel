@@ -1,27 +1,99 @@
 <?php session_start();
-if(!isset($_SESSION['username']))
-{
+if (!isset($_SESSION['username'])) {
   header('location:login.php');
 }
 ?>
 <!DOCTYPE html>
-<html>
-<head>
-	<title><?php echo $title; ?></title>
-	<link rel="stylesheet" type="text/css" href="css/custom.css">
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="css/bootstrap-grid.css">
-</head>
-</head>
-<body>
+<html xmlns="http://www.w3.org/1999/xhtml">
 
-<div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="index.php">Add Hostel</a>
-  <a href="add_rooms.php">Add Rooms</a>
-  <a href="view_hostel_details.php">View Hostel Rooms</a>
-  <a href="add_portal.php">Add Portals</a>
-  <a href="view_portal.php">Update Portals</a>
-  <a href="student_information.php">View Student Info</a>
-  <a href="logout.php">Logout.php</a>
-</div>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <title><?php echo $title; ?></title>
+
+  <!-- BOOTSTRAP STYLES-->
+  <link href="../assets/css/bootstrap.css" rel="stylesheet" />
+  <!-- FONTAWESOME STYLES-->
+  <link href="../assets/css/font-awesome.css" rel="stylesheet" />
+  <!--CUSTOM BASIC STYLES-->
+  <link href="../assets/css/basic.css" rel="stylesheet" />
+  <!--CUSTOM MAIN STYLES-->
+  <link href="../assets/css/custom.css" rel="stylesheet" />
+  <!-- GOOGLE FONTS-->
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+  <script type="text/javascript" src="js/javascript.js"></script>
+
+</head>
+
+<body>
+  <div id="wrapper">
+    <nav class="navbar navbar-default navbar-cls-top " role="navigation" style="margin-bottom: 0">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">Welcome to Hostel Portal</a>
+      </div>
+
+      <div class="header-right">
+
+        <!--<a href="../Contact_us.php" class="btn btn-info" title="New Message"><b></b><i class="fa fa-envelope-o fa-2x"></i></a>
+         <a href="message-task.html" class="btn btn-primary" title="New Task"><b> </b><i class="fa fa-bars fa-2x"></i></a>-->
+        <a href="logout.php" class="btn btn-danger" title="Logout"><i class="fa fa-exclamation-circle fa-2x"></i></a>
+
+      </div>
+    </nav>
+    <!-- /. NAV TOP  -->
+    <nav class="navbar-default navbar-side" role="navigation">
+      <div class="sidebar-collapse">
+        <ul class="nav" id="main-menu">
+          <li>
+            <div class="user-img-div">
+              <img src="../assets/img/user.jpg" class="img-thumbnail" />
+
+              <div class="inner-text">
+                Ibrahim
+                <br />
+              </div>
+            </div>
+
+          </li>
+
+
+          <li>
+            <a href="index.php" style="font-size:20px"><i class="fa fa-dashboard "></i>Add Hostel</a>
+          </li>
+          <li>
+            <a href="add_rooms.php" style="font-size:20px"><i class="fa fa-dashboard "></i>Add Rooms</a>
+          </li>
+          <li>
+            <a href="view_hostel_details.php" style="font-size:20px"><i class="fa fa-dashboard "></i>View Hostel Rooms</a>
+          </li>
+          <li>
+            <a href="add_portal.php" style="font-size:20px"><i class="fa fa-dashboard "></i>Add Portals</a>
+          </li>
+          <li>
+            <a href="view_portal.php" style="font-size:20px"><i class="fa fa-dashboard "></i>Update Portals</a>
+          </li>
+          <li>
+            <a href="student_information.php" style="font-size:20px"><i class="fa fa-dashboard "></i>View Student Info</a>
+          </li>
+          <li>
+            <a href="view_pending_allotment.php" style="font-size:20px"><i class="fa fa-dashboard "></i>Pending Allotment</a>
+          </li>
+          <li>
+            <a href="deallotbed.php" style="font-size:20px"><i class="fa fa-dashboard "></i>DeAllot Bed</a>
+          </li>
+          <li>
+            <a href="logout.php" style="font-size:20px"><i class="fa fa-dashboard "></i>Logout</a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </nav>
